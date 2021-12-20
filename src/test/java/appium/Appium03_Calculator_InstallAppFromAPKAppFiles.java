@@ -21,8 +21,9 @@ public class Appium03_Calculator_InstallAppFromAPKAppFiles {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
-        desiredCapabilities.setCapability(MobileCapabilityType.APP,"D:/_QA_SDET/_TechProEd21/13-PROJECTs/appiumMan/appiumManProject/App/Calculator.apk");//It is just use for if we download apk file on pc and call them.
-        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);//(default value= false, if you don't use that code)
+        desiredCapabilities.setCapability(MobileCapabilityType.APP,"C:/Users/BelomeX/IdeaProjects/appiumfullFramework/app/Calculator.apk");//It is just use for if we download apk file on pc and call them.
+        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+        //(default value= false, if you don't use that code)
         // False means App.apk file on the framework to install on the phone again to again when we run the code.
         // True means just one time install apk file and then doesn't install again to again.
 
@@ -51,7 +52,7 @@ public class Appium03_Calculator_InstallAppFromAPKAppFiles {
       "appium:platformName": "Android",
       "appium:deviceName": "AndroidEmulator",
       "appium:platformVersion": "8.0",
-      "appium:app": "D:/_QA_SDET/_TechProEd21/13-PROJECTs/appiumMan/appiumManProject/App/Calculator.apk"
+      "appium:app": "C:/Users/BelomeX/IdeaProjects/appiumfullFramework/app/Calculator.apk"
     }
 
      */

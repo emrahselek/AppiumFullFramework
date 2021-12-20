@@ -20,12 +20,12 @@ public class Appium09UiSelector {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
-        desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:/Users/orcun/IdeaProjects/com.techproedjavaproject/App/gestureTool.apk");
+        desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:/Users/BelomeX/IdeaProjects/appiumfullFramework/app/gestureTool.apk");
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
         AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), desiredCapabilities);
         Thread.sleep(4000);
 
-        //resourceId ile bulunan locator u cliklemek icin kullanilir
+        //resourceId ile bulunan locator u kliklemek icin kullanilir
         //  driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\")").click();
         //classname
         // driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\")").click();
