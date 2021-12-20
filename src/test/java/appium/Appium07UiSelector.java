@@ -11,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-public class Appium09UiSelector {
+public class Appium07UiSelector {
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
@@ -25,14 +25,21 @@ public class Appium09UiSelector {
         AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), desiredCapabilities);
         Thread.sleep(4000);
 
-        //resourceId ile bulunan locator u kliklemek icin kullanilir
-        //  driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\")").click();
-        //classname
-        // driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\")").click();
-        //classname text ile beraber
-        //driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").text(\"Add gesture\")").click();
-        //classname index ile
-//        driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").index(1)").click();
+//      fot id locator use resourceId:
+        System.out.println(driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").checkable(false)").getAttribute("checkable")); //false
+        System.out.println(driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").clickable(true)").getAttribute("clickable")); //true
+
+
+
+
+//      resourceId ile bulunan locator u kliklemek icin kullanilir
+//      driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\")").click();
+//      classname
+//      driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\")").click();
+//      classname text ile beraber
+//      driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").text(\"Add gesture\")").click();
+//      classname index ile
+//      driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").index(1)").click();
 
 //        List<MobileElement> buttons = driver.findElementsByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\")");
 //        for (MobileElement button : buttons) {
@@ -41,11 +48,10 @@ public class Appium09UiSelector {
 //                 break;
 //             }
 //        }
-
 //        driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").textContains(\"load\")").click();
 //        driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").textStartsWith(\"Te\")").click();
 
-        System.out.println(driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").checkable(false)").getAttribute("checkable")); //false
-        System.out.println(driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").clickable(true)").getAttribute("clickable")); //true
+
+
     }
 }

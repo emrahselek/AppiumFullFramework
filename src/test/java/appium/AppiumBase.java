@@ -19,6 +19,7 @@ public class AppiumBase {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
+        //                C:/Users/BelomeX/IdeaProjects/appiumfullFramework/app/apiDemos.apk
         String appUrl = System.getProperty("user.dir") + File.separator + "App" + File.separator + "apiDemos.apk";
         desiredCapabilities.setCapability(MobileCapabilityType.APP ,appUrl);
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);

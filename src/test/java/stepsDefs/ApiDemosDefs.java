@@ -8,6 +8,7 @@ import pages.android.ApiDemosPage;
 import pages.android.PreferenceDependenciesPage;
 import pages.android.PreferenceMainPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class ApiDemosDefs {
     ApiDemosMainPage apiDemosMainPage = new ApiDemosMainPage();
@@ -46,6 +47,7 @@ public class ApiDemosDefs {
     @Then("check wifi settings is activated")
     public void checkWifiSettingsIsActivated() {
         preferenceDependenciesPage.wifiSettings.click();
+        ReusableMethods.waitFor(2);
     }
 
     @And("close app")

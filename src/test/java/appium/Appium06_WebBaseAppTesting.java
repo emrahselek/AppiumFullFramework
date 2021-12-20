@@ -38,7 +38,7 @@ public class Appium06_WebBaseAppTesting {
         driver.findElementByXPath("//*[@id=\"nav-logobar-greeting\"]").click();//sign-in button
         Thread.sleep(1000);
 
-        Set contextNames = driver.getContextHandles();//getContextHandles() mevcut olab app turlerini Set konteynira ekliyoruz
+        Set contextNames = driver.getContextHandles();//getContextHandles() mevcut olan app turlerini Set konteynira ekliyoruz.
         for (Object contextName : contextNames){
             System.out.println(contextName);
             Thread.sleep(3000);

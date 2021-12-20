@@ -41,6 +41,7 @@ public class Appium04_GestureToolApp {
         driver.findElementById("com.davemac327.gesture.tool:id/done").click();
         Thread.sleep(1000);
 
+        //Assertion:
         String expectedTitle = "appium2";
         Thread.sleep(1000);
         String actualTitle = driver.findElementByXPath("(//*[@text='appium2'])[1]").getText();
@@ -48,6 +49,7 @@ public class Appium04_GestureToolApp {
         System.out.println(actualTitle);
         Thread.sleep(1000);
         Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertTrue(actualTitle.contains("appium2"));
 
 
     /*

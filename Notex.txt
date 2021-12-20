@@ -1,0 +1,82 @@
+
+Issues:
+SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details.
+
+Solve:
+Run your appium server with Admin permission.
+Enable "Allow Session override" flag under the "Advance" tab in Appium server before start.
+After this, run the below mentioned commands.
+
+Then Open Command Prompt with admin permission and type 2 command
+
+adb uninstall io.appium.uiautomator2.server
+
+adb uninstall io.appium.uiautomator2.server.test
+
+
+
+----------------------------------------------------------
+
+Appium:
+
+Telefon Ayari: Cep telefonun About Phone kisminda "Build number'a " 8-10 kes tikla. ardarda. Daha sonra geri don ve "Developer Options" tikla ordanda USB debugging active et.
+
+---------------------------------------------------------------
+
+locator okumak icin
+A) Appium Inspector ac. Eger telefonda indirilmis app ise. Ve command Prompt da bunu yaziyorsun:
+
+    1-For Exist aplication on your cell phone, You can do Command Prompt and type: C:\Users\BelomeX>
+      adb shell
+      dumpsys window | grep -E "mCurrentFocus"
+      dumpsys window windows | grep -E 'mCurrentFocus'
+      mCurrentFocus=Window{96cdbcd u0 com.seslisozluk/com.seslisozluk.activities.MainActivity}
+
+    2-Check the device connection, You can do Command Prompt and type: C:\Users\BelomeX>
+      adb devices
+
+B)      We use " DevTool " for find chrome web page locator.
+        Aslinda Appiumda Inspectordanda bulunabiliyor ama bazen problem cikartiyor.
+        Eger Web Browser application da test yapilacaksa,Once bilgisayardan chrome browseri actikdan sonra " chrome://inspect/#devices " adress cubuguna yazip enter yapiyoruz. daha sonra testimizi run ediyoruz. bilgisayardaki chromedan gelen bilgide inspect inpect button tiklayip ordanda locatorlari buluyoruz.
+
+------------------------------------------------------------
+
+Appium Inspector bunlari yaziyorsun:
+
+{
+  "appium:automationName": "UiAutomator2",
+  "appium:platformName": "Android",
+  "appium:deviceName": "AndroidEmulator",
+  "appium:platformVersion": "8.0",
+  "appium:appPackage": "com.seslisozluk",
+  "appium:appActivity": "com.seslisozluk.activities.MainActivity"
+}
+
+{
+  "appium:automationName": "UiAutomator2",
+  "appium:platformName": "Android",
+  "appium:deviceName": "AndroidEmulator",
+  "appium:platformVersion": "8.0",
+  "appium:app": "D:/_QA_SDET/_TechProEd21/13-PROJECTs/appiumMan/appiumManProject/App/iptv-smarters-pro.apk"
+}
+
+----------------------------------------------------------------
+
+
+intellijde kommutlari RUN yaptigimizda Appium Server calistirmamiz gerek
+
+----------
+
+Bilgisayara Android Studio indirmek gerek
+
+-----------------
+
+https://github.com/intel/haxm/wiki/Installation-Instructions-on-Windows#Downloading_Intel_HAXM
+
+https://github.com/appium/appium-inspector/releases
+
+---------------
+
+
+
+
