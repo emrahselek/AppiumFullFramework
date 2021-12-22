@@ -12,7 +12,7 @@ import utilities.ReusableMethods;
 
 public class ApiDemosDefs {
     ApiDemosMainPage apiDemosMainPage = new ApiDemosMainPage();
-    ApiDemosPage apiDemosPage= new ApiDemosPage();
+    ApiDemosPage apiDemosPage = new ApiDemosPage();
     PreferenceMainPage preferenceMainPage = new PreferenceMainPage();
     PreferenceDependenciesPage preferenceDependenciesPage = new PreferenceDependenciesPage();
 
@@ -41,8 +41,8 @@ public class ApiDemosDefs {
         if (preferenceDependenciesPage.checkBox.getAttribute("checked").equals("false")) {
             preferenceDependenciesPage.checkBox.click();
         }
-            System.out.println(preferenceDependenciesPage.checkBox.getAttribute("checked"));
-        }
+        System.out.println(preferenceDependenciesPage.checkBox.getAttribute("checked"));
+    }
 
     @Then("check wifi settings is activated")
     public void checkWifiSettingsIsActivated() {
